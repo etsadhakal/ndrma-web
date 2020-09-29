@@ -1,7 +1,7 @@
 import 'bootstrap';
 import $ from "jquery";
 
-import imageURL from './assets/trollHuntersArcadia.png';
+import imageURL from './assets/ndrmaLogo-nepal.svg';
 
 // JQuery
 $(document).ready(() => {
