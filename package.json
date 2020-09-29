@@ -1,14 +1,14 @@
 {
-  "name": "parcel-boilerplate",
+  "name": "ndrma-parcel",
   "version": "1.0.0",
-  "description": "Parcel Boilerplate",
+  "description": "ndrma-parcel",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/*.html --open -p 4040",
     "build": "parcel build src/*.html --public-url ./",
     "watch": "parcel watch src/*.html --public-url ./"
   },
-  "author": "abhijithvijayan",
+  "author": "ashish Dhakal",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -30,10 +30,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abhijithvijayan/parcel-sass-bootstrap-boilerplate.git"
+    "url": "https://github.com/etsadhakal/ndrma-web/"
   },
   "bugs": {
-    "url": "https://github.com/abhijithvijayan/parcel-sass-bootstrap-boilerplate/issues"
+    "url": "https://github.com/etsadhakal/ndrma-web/issues"
   },
-  "homepage": "https://github.com/abhijithvijayan/parcel-sass-bootstrap-boilerplate#readme"
+  "homepage": "https://github.com/etsadhakal/ndrma-web/issues"
 }
