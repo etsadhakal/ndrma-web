@@ -1,0 +1,42 @@
+
+//input
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=numeric],
+  input[type=number],
+    {
+      height: 50px;
+      padding: 0px 20px;
+      font-weight: $medium;
+      color: $black;
+      border: 1px solid $gray-200;
+      &:hover{
+        border: 1px solid $gray-400;
+      }
+      &:focus{
+        border: 1px solid $blue;
+        box-shadow: none;
+      }
+      &::placeholder { 
+        color: $gray-300;
+        border: none;
+        font-weight: $regular;
+      }
+    }
+
+    
+
+//form-groups
+.form-group{
+  label{
+    font-size: 13px;
+  }
+  input{
+    border-radius: 7px;
+  }
+}
+
+.sign-in-block{
+  height: 100vh;
+}
