@@ -57,3 +57,10 @@
     color: $blue !important;
   }
 }
+
+p{
+  line-height: 1.6;
+  font-weight: $regular;
+  letter-spacing: 0.03rem;
+  color: $gray-600;
+}
