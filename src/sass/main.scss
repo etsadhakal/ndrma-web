@@ -4,7 +4,7 @@
 @import "variables";
 @import "components";
 @import "reset";
-@import "custom"; 
+@import "custom";  
 
 .forgot-password{
   padding: 15px 20px;
@@ -14,4 +14,4 @@
   &:hover{
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
   }
-}
+} 
