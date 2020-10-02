@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel src/index.html --open -p 4040",
     "build": "parcel build src/*.html  --public-url ./",
-    "watch": "parcel watch src/*.html --public-url ./"
+    "watch": "parcel watch src/*.html src/*.scss --public-url ./"
   },
   "author": "ashish Dhakal",
   "license": "MIT",

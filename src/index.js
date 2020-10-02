@@ -3,10 +3,12 @@ import $ from "jquery";
 
 import('./reset-password.html');
 import('./forgot.html');
-import('./dashboard/dashboard.html');
+import('./dashboard.html');
 
 import imageURL from './assets/ndrmaLogo-nepal.svg';
+import logoOnly from './assets/ndrmaLogo.svg';
 import image from './assets/mailbox.gif';
+import defaultImage from './assets/default-avatar.jpg';
 
 // JQuery
 $(document).ready(() => {
