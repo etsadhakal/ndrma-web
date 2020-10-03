@@ -44,7 +44,7 @@
         <div class="list-group list-group-flush">
           <a href="#" class="btn btn-primary">
             <i class="ri-add-circle-fill ri-xl"></i> Add New Entry</a>
-          <a href="#" class="btn btn-outline-secondary">
+          <a href="#" class="btn btn-custom">
             <i class="ri-logout-circle-r-line ri-xl"></i> Logout</a>
         </div>
       </div>
@@ -72,13 +72,344 @@
 
       </nav>
       <div class="container">
-        <h1 class="mt-4"> <i class="ri ri-bar-chart-line"></i> dashboard Works</h1>
+        <div class="page-heading">
+          <h5 class="mt-4">Dashborad</h5>
+          <span>Overview & Statistics</span>
+        </div>
+        <div class="page-content">
+          <div class="analytics row row-eq-height">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="d-flex">
+                  <div class="card-icon">
+                    <i class="ri-alarm-warning-fill ri-lg"></i>
+                  </div>
+                  <div class="card-whole">
+                    <div class="card-heading">
+                      <h5> New Alerts Cases</h5>
+                      <span>Showing data from last 15 days</span>
+                    </div>
+                    <div class="card-content">
+                      <h1 class="count">23</h1>
+                    </div>
+                    <div class="card-link">
+                      <a href="">See all reports</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="d-flex">
+                  <div class="card-icon">
+                    <i class="ri-ruler-fill ri-lg"></i>
+                  </div>
+                  <div class="card-whole">
+                    <div class="card-heading">
+                      <h5> Rescue Items Stock</h5>
+                      <span>Showing data from remaining stock</span>
+                    </div>
+                    <div class="card-content">
+                      <h1 class="count">5,671</h1>
+                    </div>
+                    <div class="card-link">
+                      <a href="">See all entries</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="d-flex">
+                  <div class="card-icon">
+                    <i class="ri-bar-chart-fill ri-lg"></i>
+                  </div>
+                  <div class="card-whole">
+                    <div class="card-heading">
+                      <h5> Stock range</h5>
+                      <span>Showing available stock range by states</span>
+                    </div>
+                    <div class="card-chart">
+                      <canvas id="stockChart"></canvas>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reports row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-whole">
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex">
+                      <div class="card-icon">
+                        <i class="ri-flashlight-fill ri-lg"></i>
+                      </div>
+                      <div class="card-heading">
+                        <h5> Alerts Updates</h5>
+                        <span>Showing Updates from last 48 hours</span>
+                      </div>
+                    </div>
+                    <div class="filter-dropdown">
+                      <div class="dropdown show">
+                        <a class="btn btn-custom dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          All States
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#">All States</a>
+                          <a class="dropdown-item" href="#">State 1</a>
+                          <a class="dropdown-item" href="#">State 2</a>
+                          <a class="dropdown-item" href="#">Gandaki</a>
+                          <a class="dropdown-item" href="#">Bagmati</a>
+                          <a class="dropdown-item" href="#">State 5</a>
+                          <a class="dropdown-item" href="#">Karnali</a>
+                          <a class="dropdown-item" href="#">SudurPaschim</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <div class="d-flex flex-column alert-lists">
+                      <div class="list-item d-flex justify-content-between">
+                        <div class="list-alert">
+                          <div class="d-flex">
+                            <div class="alert-icon">
+                              <i class="flood ri-flood-fill ri-3x"></i>
+                            </div>
+                            <div class="alert-desc">
+                              <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
+                              <p>Updated 09/20 at 5:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-status d-flex">
+                          <div class="alert-status ">
+                            <a href="" class="btn high-risk animated fadeIn" data-toggle="tooltip" data-placement="top"
+                              title="Marked as High Risk">
+                              <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
+                            </a>
+                          </div>
+                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                        </div>
+                      </div>
+                      <div class="list-item d-flex justify-content-between">
+                        <div class="list-alert">
+                          <div class="d-flex">
+                            <div class="alert-icon">
+                              <i class="flood ri-flood-fill ri-3x"></i>
+                            </div>
+                            <div class="alert-desc">
+                              <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
+                              <p>Updated 09/20 at 5:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-status d-flex">
+                          <div class="alert-status ">
+                            <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
+                              data-placement="top" title="Marked as High Risk">
+                              <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
+                            </a>
+                          </div>
+                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                        </div>
+                      </div>
+                      <div class="list-item d-flex justify-content-between">
+                        <div class="list-alert">
+                          <div class="d-flex">
+                            <div class="alert-icon">
+                              <i class="flood ri-flood-fill ri-3x"></i>
+                            </div>
+                            <div class="alert-desc">
+                              <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
+                              <p>Updated 09/20 at 5:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-status d-flex">
+                          <div class="alert-status ">
+                            <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
+                              data-placement="top" title="Marked as High Risk">
+                              <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
+                            </a>
+                          </div>
+                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                        </div>
+                      </div>
+                      <div class="list-item d-flex justify-content-between">
+                        <div class="list-alert">
+                          <div class="d-flex">
+                            <div class="alert-icon">
+                              <i class="flood ri-flood-fill ri-3x"></i>
+                            </div>
+                            <div class="alert-desc">
+                              <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
+                              <p>Updated 09/20 at 5:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-status d-flex">
+                          <div class="alert-status ">
+                            <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
+                              data-placement="top" title="Marked as High Risk">
+                              <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
+                            </a>
+                          </div>
+                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                        </div>
+                      </div>
+                      <div class="list-item d-flex justify-content-between">
+                        <div class="list-alert">
+                          <div class="d-flex">
+                            <div class="alert-icon">
+                              <i class="flood ri-flood-fill ri-3x"></i>
+                            </div>
+                            <div class="alert-desc">
+                              <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
+                              <p>Updated 09/20 at 5:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-status d-flex">
+                          <div class="alert-status ">
+                            <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
+                              data-placement="top" title="Marked as High Risk">
+                              <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
+                            </a>
+                          </div>
+                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                        </div>
+                      </div>
+                      <div class="list-item d-flex justify-content-between">
+                        <div class="list-alert">
+                          <div class="d-flex">
+                            <div class="alert-icon">
+                              <i class="flood ri-flood-fill ri-3x"></i>
+                            </div>
+                            <div class="alert-desc">
+                              <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
+                              <p>Updated 09/20 at 5:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-status d-flex">
+                          <div class="alert-status ">
+                            <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
+                              data-placement="top" title="Marked as High Risk">
+                              <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
+                            </a>
+                          </div>
+                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                        </div>
+                      </div>
+                      <div class="list-item d-flex justify-content-between">
+                        <div class="list-alert">
+                          <div class="d-flex">
+                            <div class="alert-icon">
+                              <i class="flood ri-flood-fill ri-3x"></i>
+                            </div>
+                            <div class="alert-desc">
+                              <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
+                              <p>Updated 09/20 at 5:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-status d-flex">
+                          <div class="alert-status ">
+                            <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
+                              data-placement="top" title="Marked as High Risk">
+                              <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
+                            </a>
+                          </div>
+                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                        </div>
+                      </div>
+                      <div class="list-item d-flex justify-content-between">
+                        <div class="list-alert">
+                          <div class="d-flex">
+                            <div class="alert-icon">
+                              <i class="flood ri-flood-fill ri-3x"></i>
+                            </div>
+                            <div class="alert-desc">
+                              <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
+                              <p>Updated 09/20 at 5:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-status d-flex">
+                          <div class="alert-status ">
+                            <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
+                              data-placement="top" title="Marked as High Risk">
+                              <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
+                            </a>
+                          </div>
+                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                        </div>
+                      </div>
+                      <div class="list-item d-flex justify-content-between">
+                        <div class="list-alert">
+                          <div class="d-flex">
+                            <div class="alert-icon">
+                              <i class="flood ri-flood-fill ri-3x"></i>
+                            </div>
+                            <div class="alert-desc">
+                              <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
+                              <p>Updated 09/20 at 5:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-status d-flex">
+                          <div class="alert-status ">
+                            <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
+                              data-placement="top" title="Marked as High Risk">
+                              <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
+                            </a>
+                          </div>
+                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                        </div>
+                      </div>
+                      <div class="list-item d-flex justify-content-between">
+                        <div class="list-alert">
+                          <div class="d-flex">
+                            <div class="alert-icon">
+                              <i class="flood ri-flood-fill ri-3x"></i>
+                            </div>
+                            <div class="alert-desc">
+                              <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
+                              <p>Updated 09/20 at 5:30 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="list-status d-flex">
+                          <div class="alert-status ">
+                            <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
+                              data-placement="top" title="Marked as High Risk">
+                              <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
+                            </a>
+                          </div>
+                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- /#page-content-wrapper -->
 
   </div>
   <script src="index.js"></script>
+  <script src="chartJs.js"></script>
 
 </body>
 

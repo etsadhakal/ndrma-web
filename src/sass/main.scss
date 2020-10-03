@@ -8,6 +8,7 @@
 @import "sidebar"; 
 
 
+
 .forgot-password{
   padding: 15px 20px;
   background: $white;
@@ -21,4 +22,106 @@
 .bg-light{
   background: $white !important;
 }
+#page-content-wrapper{
+  position: relative; 
+  @media (min-width: 1200px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl{
+      max-width: 1400px !important;
+    }
+  }
+}
+.page-heading{
+  color: $gray-700;
+  margin-top: 50px;
+}
+.page-content{
+  margin-top: 40px;
+  .card{
+    border-radius: 7px;
+    border: none;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.03), 0px 1px 3px rgba(0, 0, 0, 0.01);
+    padding: 20px 30px;
+    height: 100%;
+    .card-icon{
+        margin-right: 16px;
+        .ri-alarm-warning-fill{
+          color: #DD6B20;
+        }
+        .ri-ruler-fill{
+          color: #319795;
+        }
+        .ri-bar-chart-fill{
+          color: #D69E2E;
+        }
+        .ri-flashlight-fill{
+          color: #3182CE;
+        }
+    }
+    .card-heading{
+      color: $gray-800; 
+    }
+    .card-content{
+      padding: 20px 0px 10px 0px;
+      .count{
+        font-size: 46px;
+        font-weight: $exbold;
+      }
+    }
+    .card-chart{
+      #stockChart{
+        width: 100%;
+        height: 100px;
+      }
+    }
+  }
+}
 
+.reports{
+  margin-top: 30px;
+  
+  .card-content{
+    .alert-lists{
+      padding: 10px 0px;
+      .list-item{
+        padding: 12px 0px;
+        border-bottom: 1px solid $gray-100;
+        .list-alert{
+          .alert-icon{
+            padding-right: 30px;
+            i{
+              display: inline-block;
+              margin-top: -8px;
+            }
+            .flood{
+              color: #975A16;;
+            }
+          }
+          .alert-desc{
+            h5,p{
+              margin-bottom: 0px;
+            }
+            p{
+              font-size: 14px;
+              letter-spacing: 0px;
+            }
+          }
+        }
+        .list-status{
+          
+          .btn{
+            display: inline-block;
+            color: $blue;
+            i{
+              display: inline-block;
+              vertical-align: text-top;
+            }
+            
+          }
+          .btn.high-risk{
+            color: $danger;
+          }
+        }
+      }
+    }
+  }
+}
