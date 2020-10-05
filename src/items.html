@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Ndrma web app</title>
+  <!-- scss file will be replaced with bundled css -->
+  <link href="sass/main.scss" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        <a href=""><img src="./assets/ndrmaLogo.svg" alt="logo"></a>
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="dashboard.html" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-donut-chart-fill ri-lg"></i> Dashboard</a>
+      </div>
+      <div class="list-group list-group-flush">
+        <span>sources</span>
+        <a href="items.html" class="list-group-item list-group-item-action bg-light active-item">
+          <i class="ri-ruler-fill ri-lg"></i> Items & Utilities</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-stack-fill ri-lg"></i> Categories</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-focus-3-fill ri-lg"></i> State & Provience</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-alarm-warning-fill ri-lg"></i> Alert Reports</a>
+      </div>
+      <div class="list-group list-group-flush">
+        <span>Admin</span>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-group-fill ri-lg"></i> Users & Roles</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-settings-2-fill ri-lg"></i> Settings</a>
+      </div>
+      <div class="sidebar-footer">
+        <div class="list-group list-group-flush">
+          <a href="#" class="btn btn-primary">
+            <i class="ri-add-circle-fill ri-xl"></i> Add New Entry</a>
+          <a href="#" class="btn btn-custom">
+            <i class="ri-logout-circle-r-line ri-xl"></i> Logout</a>
+        </div>
+      </div>
+
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom justify-content-between">
+        <div class="menu toggle">
+          <a class="btn " id="menu-toggle">
+            <i class="navbar-toggler-icon"> </i>
+          </a>
+        </div>
+        <div class="search-bar ">
+          <form action="" class="">
+            <input type="text" class="form-control" aria-label="Small" placeholder="Search here">
+          </form>
+        </div>
+        <div class="avatar">
+          <a href="" class="btn default-avatar"><img src="./assets/default-avatar.jpg" alt="" width="36px"
+              height="auto"></a>
+        </div>
+
+      </nav>
+      <div class="bg-class">
+        <div class="container">
+          <div class="page-heading">
+            <div class="d-flex justify-content-between heading-actions mt-4">
+              <div class="heading">
+                <h5 class="">Items & Utilities</h5>
+                <span>Last updated at 22 September , 2020</span>
+              </div>
+              <div class="heading-actions">
+                <button class="btn btn-custom btn-sm mx-2"> <i class="ri-file-excel-2-fill"></i> Export</button>
+                <button class="btn btn-primary btn-sm"><i class="ri-add-circle-fill"></i> Add New</button>
+              </div>
+            </div>
+          </div>
+          <div class="page-tabs">
+            <ul class="nav nav-pills" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                  aria-selected="true">Provience 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                  aria-controls="profile" aria-selected="false">Provience 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                  aria-controls="contact" aria-selected="false">Gandaki</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                  aria-controls="contact" aria-selected="false">Bagmati</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                  aria-controls="contact" aria-selected="false">Provience 5</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                  aria-controls="contact" aria-selected="false">Karnali</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                  aria-controls="contact" aria-selected="false">SudurPaschim</a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-content">
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="data-search d-flex justify-content-between">
+                  <div class="entries">
+                    <span>Showing 10 entries</span>
+                  </div>
+                  <div class="search">
+                    <form action="">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </form>
+                  </div>
+                </div>
+                <div class="data-tables">
+                  <table class="table table-striped table-responsive-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col">Item Description</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Municipality / Branch</th>
+                        <th scope="col" class="text-right">Quantity</th>
+                        <th scope="col">By Agency</th>
+                        <th scope="col">Cluster</th>
+                        <th scope="col" class="text-right"> Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Blanket</td>
+                        <td>Blanket </td>
+                        <td><span class="municipality">Kathmandu</span> <span class="branch"> HSA Kathmandu</span></td>
+                        <td class="text-right"><strong>471</strong></td>
+                        <td>MoHa</td>
+                        <td>Shelter</td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-more-2-fill ri-lg"></i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">View Full Details</a>
+                            <a class="dropdown-item" href="#">Delete Record</a>
+
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Blanket</td>
+                        <td>Blanket </td>
+                        <td><span class="municipality">Kathmandu</span> <span class="branch"> HSA Kathmandu</span></td>
+                        <td class="text-right"><strong>471</strong></td>
+                        <td>MoHa</td>
+                        <td>Shelter</td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-more-2-fill ri-lg"></i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">View Full Details</a>
+                            <a class="dropdown-item" href="#">Delete Record</a>
+
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Blanket</td>
+                        <td>Blanket </td>
+                        <td><span class="municipality">Kathmandu</span> <span class="branch"> HSA Kathmandu</span></td>
+                        <td class="text-right"><strong>471</strong></td>
+                        <td>MoHa</td>
+                        <td>Shelter</td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-more-2-fill ri-lg"></i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">View Full Details</a>
+                            <a class="dropdown-item" href="#">Delete Record</a>
+
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Blanket</td>
+                        <td>Blanket </td>
+                        <td><span class="municipality">Kathmandu</span> <span class="branch"> HSA Kathmandu</span></td>
+                        <td class="text-right"><strong>471</strong></td>
+                        <td>MoHa</td>
+                        <td>Shelter</td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-more-2-fill ri-lg"></i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">View Full Details</a>
+                            <a class="dropdown-item" href="#">Delete Record</a>
+
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Blanket</td>
+                        <td>Blanket </td>
+                        <td><span class="municipality">Kathmandu</span> <span class="branch"> HSA Kathmandu</span></td>
+                        <td class="text-right"><strong>471</strong></td>
+                        <td>MoHa</td>
+                        <td>Shelter</td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-more-2-fill ri-lg"></i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">View Full Details</a>
+                            <a class="dropdown-item" href="#">Delete Record</a>
+
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Blanket</td>
+                        <td>Blanket </td>
+                        <td><span class="municipality">Kathmandu</span> <span class="branch"> HSA Kathmandu</span></td>
+                        <td class="text-right"><strong>471</strong></td>
+                        <td>MoHa</td>
+                        <td>Shelter</td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-more-2-fill ri-lg"></i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">View Full Details</a>
+                            <a class="dropdown-item" href="#">Delete Record</a>
+
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Blanket</td>
+                        <td>Blanket </td>
+                        <td><span class="municipality">Kathmandu</span> <span class="branch"> HSA Kathmandu</span></td>
+                        <td class="text-right"><strong>471</strong></td>
+                        <td>MoHa</td>
+                        <td>Shelter</td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-more-2-fill ri-lg"></i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">View Full Details</a>
+                            <a class="dropdown-item" href="#">Delete Record</a>
+
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Blanket</td>
+                        <td>Blanket </td>
+                        <td><span class="municipality">Kathmandu</span> <span class="branch"> HSA Kathmandu</span></td>
+                        <td class="text-right"><strong>471</strong></td>
+                        <td>MoHa</td>
+                        <td>Shelter</td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-more-2-fill ri-lg"></i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">View Full Details</a>
+                            <a class="dropdown-item" href="#">Delete Record</a>
+
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Blanket</td>
+                        <td>Blanket </td>
+                        <td><span class="municipality">Kathmandu</span> <span class="branch"> HSA Kathmandu</span></td>
+                        <td class="text-right"><strong>471</strong></td>
+                        <td>MoHa</td>
+                        <td>Shelter</td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-more-2-fill ri-lg"></i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">View Full Details</a>
+                            <a class="dropdown-item" href="#">Delete Record</a>
+
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Blanket</td>
+                        <td>Blanket </td>
+                        <td><span class="municipality">Kathmandu</span> <span class="branch"> HSA Kathmandu</span></td>
+                        <td class="text-right"><strong>471</strong></td>
+                        <td>MoHa</td>
+                        <td>Shelter</td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-more-2-fill ri-lg"></i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">View Full Details</a>
+                            <a class="dropdown-item" href="#">Delete Record</a>
+
+                          </div>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+              <div class=" tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">..sdsadas.
+              </div>
+              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">..asdasd.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <script src="index.js"></script>
+  <script src="chartJs.js"></script>
+
+</body>
+
+</html>

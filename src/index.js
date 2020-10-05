@@ -1,6 +1,8 @@
 import 'bootstrap';
 import $ from "jquery";
 import Chart from 'chart.js';
+var dt = require('datatables.net')();
+var buttons = require('datatables.net-buttons')();
 
 
 
@@ -8,6 +10,7 @@ import Chart from 'chart.js';
 import('./reset-password.html');
 import('./forgot.html');
 import('./dashboard.html');
+
 
 import imageURL from './assets/ndrmaLogo-nepal.svg';
 import logoOnly from './assets/ndrmaLogo.svg';
@@ -34,7 +37,7 @@ $(document).ready(function () {
 });
 
 //charts
-var ctx = document.getElementById('stockChart').getContext("2d");
+var ctx = document.getElementById('stockChart');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -118,4 +121,8 @@ var myChart = new Chart(ctx, {
             }
         }
     }
+});
+
+$(document).ready(function () {
+    $('#itemShow').DataTable();
 });
