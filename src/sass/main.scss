@@ -6,6 +6,7 @@
 @import "reset";
 @import "custom";  
 @import "sidebar"; 
+@import "modals"; 
 
 
 
@@ -158,6 +159,14 @@
 
 .snow{
   color: #4299E1;
+}
+
+.wildfire{
+  color: $danger;
+}
+
+.rainfall{
+  color: #4282e1;
 }
 
 .marked{

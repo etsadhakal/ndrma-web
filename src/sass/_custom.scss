@@ -57,6 +57,26 @@
     color: $blue !important;
   }
 }
+.custom-select{
+  height: 50px;
+  padding: 0px 20px;
+  font-weight: $medium;
+  color: $black;
+  border: 1px solid $gray-200;
+  &:hover{
+    border: 1px solid $gray-400;
+  }
+  &:focus{
+    border: 1px solid $blue;
+    box-shadow: none;
+  }
+  &::placeholder { 
+    color: $gray-300;
+    border: none;
+    font-weight: $regular;
+  }
+  border-radius: 7px;
+}
 
 p{
   line-height: 1.6;
@@ -64,3 +84,4 @@ p{
   letter-spacing: 0.03rem;
   color: $gray-600;
 }
+

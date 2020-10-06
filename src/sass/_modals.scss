@@ -1,0 +1,125 @@
+/*******************************
+* MODAL AS LEFT/RIGHT SIDEBAR
+* Add "left" or "right" in modal parent div, after class="modal".
+* Get free snippets on bootpen.com
+*******************************/
+
+.modal.right .modal-dialog {
+  position: fixed;
+  right: 0;
+  margin: auto;
+  width: 45vw;
+  height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+      -ms-transform: translate3d(0%, 0, 0);
+       -o-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0);
+}
+
+.modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+
+
+      
+/*Right*/
+.modal.right.fade .modal-dialog {
+  right: -320px;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+     -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+       -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+          transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+  right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: 0px;
+  background: none;
+  padding: 20px 32px;
+  position: fixed;
+  width: 100%;
+  background: $white;
+  z-index: 1;
+}
+
+.modal-body{
+  margin-top: 65px;
+  padding: 20px 32px 60px 32px ; 
+  .section{
+    margin-bottom: 30px;
+    .sec-title{
+      margin-bottom: 20px;
+      span{
+        display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: $blue;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      }
+      .sub-title{
+        font-size: 12px;
+        color: $gray-800;
+        font-weight: 400;
+        letter-spacing: 0;
+        text-transform: lowercase;
+
+      }
+    }
+    .custom-checkbox{
+      input[type="checkbox"] {
+        display: none;
+      }
+      
+      input[type="checkbox"] + label {
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        border-radius: 7px;
+        background-color:$white;
+        border:solid 2px $gray-200;
+        padding: .8rem 1rem;
+        display: inline-block;
+        -moz-user-select: -moz-none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin-right: 1rem;
+        margin-bottom: .8rem;
+      }
+      
+      
+      input[type="checkbox"]:checked + label {
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        background-color: lighten($success, 32); 
+        color: darken($success, 16); 
+        border-color:darken($success, 16);
+      }
+      
+    }
+  }
+}
+
+.modal-footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border: none;
+    background: $white;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
+}
