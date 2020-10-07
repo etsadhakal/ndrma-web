@@ -24,7 +24,8 @@
   background: $white !important;
 }
 #page-content-wrapper{
-  position: relative; 
+  position: relative;
+  overflow: auto; 
   @media (min-width: 1200px) {
     .container, .container-sm, .container-md, .container-lg, .container-xl{
       max-width: 1400px !important;
@@ -60,6 +61,9 @@
     }
     .card-heading{
       color: $gray-800; 
+      .histogram{
+        color: #B83280;
+      }
     }
     .card-content{
       padding: 24px 0px;
@@ -184,6 +188,18 @@
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
   max-height: 200px;
 }
+.bg-class-dark{
+  background: #4A5568;
+  max-height: 650px;
+    .heading-actions{
+      .heading{
+        color: $white; 
+      }
+      .btn-custom{
+        color: $white;
+      }
+    }
+}
 .heading-actions{
   align-items: center;
 }
@@ -237,7 +253,7 @@
     tbody{
       td{
         border: none;
-        padding: 16px 32px;
+        padding: 22px 32px;
         span{
           display: block;
         }
@@ -265,4 +281,16 @@
     background: $gray-100;
   }
   
+}
+
+.page-content{
+  .alert-histogram{
+    min-height: 200px;
+    margin-top: 50px;
+    .card-histogram{
+      #alertHisto{
+        margin: 10px auto;
+      }
+    }
+  }
 }

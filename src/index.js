@@ -1,11 +1,6 @@
 import 'bootstrap';
 import $ from "jquery";
 import Chart from 'chart.js';
-var dt = require('datatables.net')();
-var buttons = require('datatables.net-buttons')();
-
-
-
 
 import('./reset-password.html');
 import('./forgot.html');
@@ -123,6 +118,3 @@ var myChart = new Chart(ctx, {
     }
 });
 
-$(document).ready(function () {
-    $('#itemShow').DataTable();
-});
