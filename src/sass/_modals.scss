@@ -59,6 +59,7 @@
 
 .modal-body{
   margin-top: 65px;
+  margin-bottom: 65px;
   padding: 20px 32px 80px 32px ; 
   .section{
     margin-bottom: 30px;
@@ -82,12 +83,23 @@
 
       }
     }
+    .new-title{
+      span{
+      letter-spacing: 0px;
+      color: $gray-800; 
+      text-transform: capitalize; 
+      font-size: 16px;
+      }
+    }
     .custom-checkbox{
-      input[type="checkbox"] {
+      input[type="checkbox"],
+      input[type="radio"] {
         display: none;
       }
       
-      input[type="checkbox"] + label {
+      input[type="checkbox"] + label,
+      input[type="radio"] + label
+       {
         -webkit-transition: all 500ms ease;
         transition: all 500ms ease;
         font-size: 16px;
@@ -107,7 +119,9 @@
       }
       
       
-      input[type="checkbox"]:checked + label {
+      input[type="checkbox"]:checked + label,
+      input[type="radio"]:checked + label,
+       {
         -webkit-transition: all 500ms ease;
         transition: all 500ms ease;
         background-color: lighten($success, 32); 
@@ -115,6 +129,37 @@
         border-color:darken($success, 16);
       }
       
+    }
+    .sec-body{
+      .source-list{
+        padding: 10px 0px;
+        border-bottom: 1px solid $gray-100;
+        .location{
+          .location-icon{
+            margin-right: 12px;
+          }
+          .source-location{
+            .source{
+              font-weight: 500;
+            }
+            p{
+              font-size: 14px;
+            }
+          }
+        }
+        .contact{
+          font-weight: 600;
+          color: $blue;
+        }
+      }
+      .rescue-item-list{
+        font-weight: 500;
+        padding: 20px 0px;
+        border-bottom: 1px solid $gray-100;
+        .item-amount{
+          color: $blue;
+        }
+      }
     }
   }
 }
@@ -127,4 +172,54 @@
     background: $white;
     box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
     padding: 1.5rem;
+    .ongoing-rescue{
+      width: 100%;
+      display: block;
+      i{
+        color: $success;
+        padding-right: 0px;
+      }
+    }
+}
+.mark-as{
+  align-items: center;
+  .heading{
+    h5{
+      color: $danger;
+      i{
+        padding-right: 15px;
+      }
+    }
+    span{
+      font-size: 14px;
+    }
+  }
+  .switch{
+    custom-switch{
+      cursor: pointer; 
+    }
+  }
+}
+.ongoing-rescue{
+  margin-top: 10px;
+  align-items: center;
+  color: $success;
+  i{
+    padding-right: 15px;
+  }
+}
+
+.section{
+  .alert-title{
+    margin-top: 30px;
+    .alert-icon{
+      margin-right: 20px;
+      margin-top: -10px;
+    }
+    .alert-desc{
+      h5{
+        margin: 2px 0px;
+      }
+    }
+  }
 }

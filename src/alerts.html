@@ -81,7 +81,7 @@
               </div>
               <div class="heading-actions">
                 <button class="btn btn-custom btn-sm mx-2"> <i class="ri-file-excel-2-fill"></i> Export</button>
-                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addCategory"><i
+                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#alertReport"><i
                     class="ri-add-circle-fill"></i> Add New</button>
               </div>
             </div>
@@ -189,7 +189,8 @@
                                   <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                                 </a>
                               </div>
-                              <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i>
+                              <button class="btn" data-toggle="modal" data-target="#discoverStatus"><i
+                                  class="ri-compass-discover-fill ri-lg"></i>
                                 Discover</button>
                             </div>
                           </div>
@@ -212,7 +213,8 @@
                                   <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                                 </a>
                               </div>
-                              <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i>
+                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                                  class="ri-compass-discover-fill ri-lg"></i>
                                 Discover</button>
                             </div>
                           </div>
@@ -235,7 +237,8 @@
                                   <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                                 </a>
                               </div>
-                              <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i>
+                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                                  class="ri-compass-discover-fill ri-lg"></i>
                                 Discover</button>
                             </div>
                           </div>
@@ -258,7 +261,8 @@
                                   <i class="ri-run-fill ri-xl animate__animated infinite animate__pulse"></i>
                                 </a>
                               </div>
-                              <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i>
+                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                                  class="ri-compass-discover-fill ri-lg"></i>
                                 Discover</button>
                             </div>
                           </div>
@@ -281,7 +285,8 @@
                                   <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                                 </a>
                               </div>
-                              <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i>
+                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                                  class="ri-compass-discover-fill ri-lg"></i>
                                 Discover</button>
                             </div>
                           </div>
@@ -304,7 +309,8 @@
                                   <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                                 </a>
                               </div>
-                              <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i>
+                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                                  class="ri-compass-discover-fill ri-lg"></i>
                                 Discover</button>
                             </div>
                           </div>
@@ -327,7 +333,8 @@
                                   <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                                 </a>
                               </div>
-                              <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i>
+                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                                  class="ri-compass-discover-fill ri-lg"></i>
                                 Discover</button>
                             </div>
                           </div>
@@ -350,7 +357,8 @@
                                   <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                                 </a>
                               </div>
-                              <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i>
+                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                                  class="ri-compass-discover-fill ri-lg"></i>
                                 Discover</button>
                             </div>
                           </div>
@@ -455,13 +463,13 @@
   });
 </script>
 <!-- Modals -->
-<div class="modal right " id="addCategory" tabindex="-1" role="dialog">
+<div class="modal right " id="alertReport" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Add New Category / Cluster </h4>
+        <h4 class="modal-title">Add New Alert Report </h4>
         <button type="button" class="close" data-dismiss="modal"><i class="ri-close-circle-fill ri-xl"></i></button>
       </div>
 
@@ -470,34 +478,119 @@
         <div class="modal-body">
           <div class="section">
             <div class="sec-title">
-              <span>CATEGORY / CLUSTER DETAILS</span>
+              <span>Choose Alert Type</span>
+              <span class="sub-title">Please select one alert type to report that has been caused </span>
+            </div>
+            <div class="sec-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group custom-checkbox">
+                    <input type="radio" id="flood" name="disaster" />
+                    <label for="flood"> <i class=" flood ri-flood-fill ri-lg"></i> Flood</label>
+                    <input type="radio" id="earthquake" name="disaster" />
+                    <label for="earthquake"> <i class=" earthquake ri-earthquake-fill ri-lg"></i> Earthquake</label>
+                    <input type="radio" id="wildfire" name="disaster" />
+                    <label for="wildfire"> <i class=" wildfire ri-fire-fill ri-lg"></i> Wildfire</label>
+                    <input type="radio" id="rainfall" name="disaster" />
+                    <label for="rainfall"> <i class=" rainfall ri-heavy-showers-fill ri-lg"></i> Heavy
+                      Rainfall</label>
+                    <input type="radio" id="snowfall" name="disaster" />
+                    <label for="snowfall"> <i class=" snow ri-snowy-fill ri-lg"></i> Heavy Snowfall</label>
+                    <input type="radio" id="lightining" name="disaster" />
+                    <label for="lightining"> <i class=" lightining ri-thunderstorms-fill ri-lg"></i> Heavy
+                      lightining</label>
+                    <input type="radio" id="hailstrome" name="disaster" />
+                    <label for="hailstrome"> <i class=" hailstrom ri-hail-fill ri-lg"></i> Heavy
+                      hailstrome</label>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="mark-as d-flex justify-content-between">
+                    <div class="heading">
+                      <h5><i class="ri-error-warning-fill"></i>Mark as High Risk</h5>
+                      <span>Please enable if the alert has the high posibility of causing massive damage</span>
+                    </div>
+                    <div class="switch">
+                      <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-title">
+              <span>Alert Details</span>
             </div>
             <div class="sec-body">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="formGroupExampleInput">Select Type</label>
+                    <label for="formGroupExampleInput">Select Provience</label>
                     <select name="" id="" class="custom-select">
                       <option selected>Choose...</option>
-                      <option value="1">Category</option>
-                      <option value="2">Cluster</option>
+                      <option value="1">Provience 1</option>
+                      <option value="2">Provience 2</option>
+                      <option value="3">Gandaki</option>
+                      <option value="4">Bagmati</option>
+                      <option value="5">Provience 5</option>
+                      <option value="6">Karnali</option>
+                      <option value="7">SudurPaschim</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Select Municipality</label>
+                    <select name="" id="" class="custom-select">
+                      <option selected>Choose...</option>
+                      <option value="1">Kathmandu</option>
+                      <option value="2">Lalitpur</option>
+                      <option value="3">Bhaktapur</option>
+                      <option value="4">Hetauda</option>
                     </select>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <div class="form-group">
-                    <label for="formGroupExampleInput">Name</label>
-                    <input type="text" class="form-control" placeholder="Type category name">
+                    <label for="formGroupExampleInput">Select District</label>
+                    <select name="" id="" class="custom-select">
+                      <option selected>Choose...</option>
+                      <option value="1">Hetauda</option>
+                      <option value="2">Makwanpur</option>
+                      <option value="3">Himchuli</option>
+                      <option value="4">Makwanpur</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="">Ward No</label>
+                    <input type="text" class="form-control">
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-title">
+              <span>Alert Location</span>
+            </div>
+            <div class="sec-body">
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label for="">Remarks</label>
-                    <textarea type="text" class="form-control text-left" rows="6">
+                    <label for="formGroupExampleInput">Select Location</label>
+                    <input type="text" class="form-control" placeholder="Search..">
                   </div>
                 </div>
               </div>
@@ -510,7 +603,171 @@
         <!-- Modal footer -->
         <div class="modal-footer">
           <button type="button btn-primary" class="btn btn-primary w-100" data-dismiss="modal">
-            <i class="ri-checkbox-circle-fill"></i> Save Details</button>
+            Submit & Publish Alert Report</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal right " id="discoverStatus" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="ri-compass-discover-fill"></i> Discover Status</h4>
+        <button type="button" class="close" data-dismiss="modal"><i class="ri-close-circle-fill ri-xl"></i></button>
+      </div>
+
+      <!-- Modal body -->
+      <form action="">
+        <div class="modal-body">
+          <div class="section">
+            <div class="alert-title">
+              <div class="d-flex">
+                <div class="alert-icon">
+                  <i class="flood ri-flood-fill ri-3x"></i>
+                </div>
+                <div class="alert-desc">
+                  <h5>Flood at Sukla Gandaki , Raipur (Gandaki)</h5>
+                  <p>Updated 09/20 at 5:30 AM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="mark-as d-flex justify-content-between">
+                    <div class="heading">
+                      <h5><i class="ri-error-warning-fill"></i>Mark as High Risk</h5>
+                    </div>
+                    <div class="switch">
+                      <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="markedHigh" checked>
+                        <label class="custom-control-label" for="markedHigh"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="ongoing-rescue d-flex justify-content-between">
+                    <div class="heading">
+                      <h5><i class="ri-run-fill"></i>Ongoing Rescue</h5>
+                    </div>
+                    <div class="switch">
+                      <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="ongoingRescue" checked>
+                        <label class="custom-control-label" for="ongoingRescue"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.5401338455267!2d84.06076711504011!3d28.069062716109634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995bb2c8ce51fbd%3A0x76b8fd722830103c!2sShuklagandaki%20Municipality%20Ward%20No.%209!5e0!3m2!1sen!2snp!4v1602171649074!5m2!1sen!2snp"
+                width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-title new-title">
+              <span>Nearby Useful Resources</span>
+            </div>
+            <div class="sec-body">
+              <div class="source-list">
+                <div class="d-flex justify-content-between">
+                  <div class="location">
+                    <div class="d-flex">
+                      <div class="location-icon">
+                        <i class="ri-pin-distance-fill"></i>
+                      </div>
+                      <div class="source-location">
+                        <span class="source">Nepal Sainik Bahini Adda , Ramechap ,
+                          Gorkha</span>
+                        <p>12.78 Km away from rescue spot</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact">
+                    <span><i class="ri-phone-fill"></i> +977 - 561231</span>
+                  </div>
+                </div>
+              </div>
+              <div class="source-list">
+                <div class="d-flex justify-content-between">
+                  <div class="location">
+                    <div class="d-flex">
+                      <div class="location-icon">
+                        <i class="ri-pin-distance-fill"></i>
+                      </div>
+                      <div class="source-location">
+                        <span class="source">Nepal Sainik Bahini Adda , Ramechap ,
+                          Gorkha</span>
+                        <p>12.78 Km away from rescue spot</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact">
+                    <span><i class="ri-phone-fill"></i> +977 - 561231</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-title new-title">
+              <span>List of possible available rescue items</span>
+            </div>
+            <div class="sec-body">
+              <div class="rescue-item-list">
+                <div class="d-flex justify-content-between">
+                  <div class="item-name">
+                    Tirpal / Tarpolian
+                  </div>
+                  <div class="item-amount">
+                    16
+                  </div>
+                </div>
+              </div>
+              <div class="rescue-item-list">
+                <div class="d-flex justify-content-between">
+                  <div class="item-name">
+                    Bull Dojer
+                  </div>
+                  <div class="item-amount">
+                    2
+                  </div>
+                </div>
+              </div>
+              <div class="rescue-item-list">
+                <div class="d-flex justify-content-between">
+                  <div class="item-name">
+                    Ladder
+                  </div>
+                  <div class="item-amount">
+                    19
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button btn-primary" class="btn btn-primary w-100" data-dismiss="modal">
+            <i class="ri-checkbox-circle-fill"></i> Mark as Sucessfully Rescued</button>
         </div>
       </form>
 

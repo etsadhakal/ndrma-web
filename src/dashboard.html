@@ -195,7 +195,9 @@
                               <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                             </a>
                           </div>
-                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                          <button class="btn" data-toggle="modal" data-target="#discoverStatus"><i
+                              class="ri-compass-discover-fill ri-lg"></i>
+                            Discover</button>
                         </div>
                       </div>
                       <div class="list-item d-flex justify-content-between">
@@ -217,7 +219,9 @@
                               <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                             </a>
                           </div>
-                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                          <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                              class="ri-compass-discover-fill ri-lg"></i>
+                            Discover</button>
                         </div>
                       </div>
                       <div class="list-item d-flex justify-content-between">
@@ -239,7 +243,9 @@
                               <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                             </a>
                           </div>
-                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                          <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                              class="ri-compass-discover-fill ri-lg"></i>
+                            Discover</button>
                         </div>
                       </div>
                       <div class="list-item d-flex justify-content-between">
@@ -261,7 +267,9 @@
                               <i class="ri-run-fill ri-xl animate__animated infinite animate__pulse"></i>
                             </a>
                           </div>
-                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                          <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                              class="ri-compass-discover-fill ri-lg"></i>
+                            Discover</button>
                         </div>
                       </div>
                       <div class="list-item d-flex justify-content-between">
@@ -283,7 +291,9 @@
                               <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                             </a>
                           </div>
-                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                          <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                              class="ri-compass-discover-fill ri-lg"></i>
+                            Discover</button>
                         </div>
                       </div>
                       <div class="list-item d-flex justify-content-between">
@@ -305,7 +315,9 @@
                               <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                             </a>
                           </div>
-                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                          <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                              class="ri-compass-discover-fill ri-lg"></i>
+                            Discover</button>
                         </div>
                       </div>
                       <div class="list-item d-flex justify-content-between">
@@ -327,7 +339,9 @@
                               <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                             </a>
                           </div>
-                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                          <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                              class="ri-compass-discover-fill ri-lg"></i>
+                            Discover</button>
                         </div>
                       </div>
                       <div class="list-item d-flex justify-content-between">
@@ -349,7 +363,9 @@
                               <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
                             </a>
                           </div>
-                          <button href="" class="btn"><i class="ri-compass-discover-fill ri-lg"></i> Discover</button>
+                          <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
+                              class="ri-compass-discover-fill ri-lg"></i>
+                            Discover</button>
                         </div>
                       </div>
 
@@ -438,5 +454,168 @@
   <script src="chartJs.js"></script>
 
 </body>
+<div class="modal right " id="discoverStatus" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="ri-compass-discover-fill"></i> Discover Status</h4>
+        <button type="button" class="close" data-dismiss="modal"><i class="ri-close-circle-fill ri-xl"></i></button>
+      </div>
+
+      <!-- Modal body -->
+      <form action="">
+        <div class="modal-body">
+          <div class="section">
+            <div class="alert-title">
+              <div class="d-flex">
+                <div class="alert-icon">
+                  <i class="flood ri-flood-fill ri-3x"></i>
+                </div>
+                <div class="alert-desc">
+                  <h5>Flood at Sukla Gandaki , Raipur (Gandaki)</h5>
+                  <p>Updated 09/20 at 5:30 AM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="mark-as d-flex justify-content-between">
+                    <div class="heading">
+                      <h5><i class="ri-error-warning-fill"></i>Mark as High Risk</h5>
+                    </div>
+                    <div class="switch">
+                      <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="markedHigh" checked>
+                        <label class="custom-control-label" for="markedHigh"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="ongoing-rescue d-flex justify-content-between">
+                    <div class="heading">
+                      <h5><i class="ri-run-fill"></i>Ongoing Rescue</h5>
+                    </div>
+                    <div class="switch">
+                      <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="ongoingRescue" checked>
+                        <label class="custom-control-label" for="ongoingRescue"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.5401338455267!2d84.06076711504011!3d28.069062716109634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995bb2c8ce51fbd%3A0x76b8fd722830103c!2sShuklagandaki%20Municipality%20Ward%20No.%209!5e0!3m2!1sen!2snp!4v1602171649074!5m2!1sen!2snp"
+                width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-title new-title">
+              <span>Nearby Useful Resources</span>
+            </div>
+            <div class="sec-body">
+              <div class="source-list">
+                <div class="d-flex justify-content-between">
+                  <div class="location">
+                    <div class="d-flex">
+                      <div class="location-icon">
+                        <i class="ri-pin-distance-fill"></i>
+                      </div>
+                      <div class="source-location">
+                        <span class="source">Nepal Sainik Bahini Adda , Ramechap ,
+                          Gorkha</span>
+                        <p>12.78 Km away from rescue spot</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact">
+                    <span><i class="ri-phone-fill"></i> +977 - 561231</span>
+                  </div>
+                </div>
+              </div>
+              <div class="source-list">
+                <div class="d-flex justify-content-between">
+                  <div class="location">
+                    <div class="d-flex">
+                      <div class="location-icon">
+                        <i class="ri-pin-distance-fill"></i>
+                      </div>
+                      <div class="source-location">
+                        <span class="source">Nepal Sainik Bahini Adda , Ramechap ,
+                          Gorkha</span>
+                        <p>12.78 Km away from rescue spot</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact">
+                    <span><i class="ri-phone-fill"></i> +977 - 561231</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-title new-title">
+              <span>List of possible available rescue items</span>
+            </div>
+            <div class="sec-body">
+              <div class="rescue-item-list">
+                <div class="d-flex justify-content-between">
+                  <div class="item-name">
+                    Tirpal / Tarpolian
+                  </div>
+                  <div class="item-amount">
+                    16
+                  </div>
+                </div>
+              </div>
+              <div class="rescue-item-list">
+                <div class="d-flex justify-content-between">
+                  <div class="item-name">
+                    Bull Dojer
+                  </div>
+                  <div class="item-amount">
+                    2
+                  </div>
+                </div>
+              </div>
+              <div class="rescue-item-list">
+                <div class="d-flex justify-content-between">
+                  <div class="item-name">
+                    Ladder
+                  </div>
+                  <div class="item-amount">
+                    19
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button btn-primary" class="btn btn-primary w-100" data-dismiss="modal">
+            <i class="ri-checkbox-circle-fill"></i>Mark as Sucessfully Rescued</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
 
 </html>
