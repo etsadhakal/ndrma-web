@@ -31,6 +31,9 @@
       max-width: 1400px !important;
     }
   }
+  nav{
+    z-index: 1;
+  }
 }
 .page-heading{
   color: $gray-700;
@@ -78,6 +81,14 @@
         height: 100px;
       }
     }
+    
+  }
+  .card-footer{
+    background: $white;
+    border-radius: 7px;
+    margin-top: 30px;
+    border: none;
+    padding: 0px !important;
   }
 }
 
@@ -200,6 +211,22 @@
       }
     }
 }
+.bg-transparent{
+  background: transparent;
+  box-shadow: none;
+}
+.bg-profile{
+  background: $gray-700;
+  max-height: 300px;
+  .heading-actions{
+    .heading{
+      color: $white; 
+    }
+    .btn-custom{
+      color: $white;
+    }
+  }
+}
 .heading-actions{
   align-items: center;
 }
@@ -252,6 +279,7 @@
     }
     tbody{
       td{
+        align-items: center; 
         border: none;
         padding: 22px 32px;
         span{
@@ -265,6 +293,11 @@
           &::after{
             display: none;
           }
+        }
+        img{
+          display: inline-flex;
+          border-radius: 35px;
+          margin-right: 12px;
         }
       }
       .actions{
@@ -293,4 +326,151 @@
       }
     }
   }
+  .permission{
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
+.settings-head{
+  margin-top: 32px;
+}
+.role-lists{
+  .list-item{
+    border-bottom: 1px solid $gray-100;
+    padding: 20px 0px;
+    .permission-title{
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+  }
+  
+}
+
+.drag-drop{
+  position: relative;
+  margin-top: 20px;
+  &:hover{
+
+  }
+  label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    display: block;
+    background: $gray-100;
+    width: 100%;
+    height: 100%;
+    background: $gray-100;
+    border: 3px dotted $gray-400;
+    border-radius: 5px;
+    span{
+      position: relative;
+      display: block;
+      text-align: center;
+      top: 30%;
+      color: $gray-700;
+    }
+  }
+  input{
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+  }
+}
+.profileDetails{
+  .card{
+    margin-bottom: 40px;
+  }
+}
+
+.profile{
+  .card-heading{
+    margin-top: 20px;
+  }
+  .card{
+    margin-bottom: 40px;
+  }
+}
+//maps
+.mapboxgl-popup {
+  max-width: 350px !important;
+  font: 14px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+  }
+
+  .mapboxgl-popup-content{
+    border-radius: 7px !important;
+    padding: 0px !important;
+    overflow: hidden;
+    .content-head{
+      padding:10px 16px;
+      background:$gray-100;
+      color: $gray-700;
+      i{
+        margin-right: 10px;
+      }
+    }
+    .content-tiltle{
+      display: flex;
+      padding: 20px 18px;
+      border-bottom: 1px solid $gray-200;
+      .alert-icon{
+        margin-right: 16px;
+      }
+      .alert-title{
+        .head{
+          display: block;
+          font-weight: 600;
+          color: $gray-800;
+          font-size: 15px;
+          margin-top: 5px;
+        }
+        .date{
+          color: $gray-600;
+          font-weight: 500;
+        }
+
+      }
+    }
+    .content-body{
+       padding: 20px 18px;
+       p{
+         margin-bottom: 4px;
+       }
+       ul{
+         li{
+           padding: 6px 0px;
+           font-weight: 500;
+           span{
+             float: right;
+             color: $blue;
+           }
+           &:nth-child(4n+0) {
+            padding-bottom: 0px;
+            display: none;
+          }
+         }
+       } 
+    }
+    
+    .content-link{
+      padding: 0px 18px 20px 18px;
+      font-weight: 500;
+    }
+    
+  }
+  .marker{
+    border: 1px solid #ddd;
+  }
+  .mapboxgl-popup-close-button{
+    font-size: 20px;
+    margin-right: 8px;
+    margin-top: 6px;
+    color: $gray-600;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    border-radius: 50px !important;
+    &:hover{
+      background: $gray-300 !important;
+    }
 }

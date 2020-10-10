@@ -30,14 +30,14 @@
           <i class="ri-stack-fill ri-lg"></i> Categories</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">
           <i class="ri-focus-3-fill ri-lg"></i> State & Provience</a>
-        <a href="alerts.html" class="list-group-item list-group-item-action bg-light active-item">
+        <a href="alerts.html" class="list-group-item list-group-item-action bg-light">
           <i class="ri-alarm-warning-fill ri-lg"></i> Alert Reports</a>
       </div>
       <div class="list-group list-group-flush">
         <span>Admin</span>
         <a href="users-roles.html" class="list-group-item list-group-item-action bg-light">
           <i class="ri-group-fill ri-lg"></i> Users & Roles</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">
+        <a href="settings.html" class="list-group-item list-group-item-action bg-light active-item">
           <i class="ri-settings-2-fill ri-lg"></i> Settings</a>
       </div>
       <div class="sidebar-footer">
@@ -76,296 +76,124 @@
           <div class="page-heading">
             <div class="d-flex justify-content-between heading-actions mt-4">
               <div class="heading">
-                <h5 class="">Alerts Reports</h5>
-                <span>Last updated at 2 hours ago</span>
+                <h5 class="">Settings</h5>
+                <span>Last changes made on 3 hours ago</span>
               </div>
-              <div class="heading-actions">
-                <button class="btn btn-custom btn-sm mx-2"> <i class="ri-file-excel-2-fill"></i> Export</button>
-                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#alertReport"><i
-                    class="ri-add-circle-fill"></i> Add New</button>
-              </div>
+
             </div>
           </div>
           <div class="page-content">
             <div class="row">
               <div class="col-md-8 offset-md-2">
-                <div class="alert-histogram">
+                <div class="settings-head">
                   <div class="card">
                     <div class="d-flex justify-content-between">
                       <div class="card-heading">
-                        <h5> Alerts Histogram</h5>
-                        <span class="histogram">10 alerts reports per day on avg</span>
+                        <h5> Manage Settings</h5>
+                        <span class="histogram">Allow roles permission to dynamically control the user workflow</span>
                       </div>
-                      <div class="card-action">
-                        <div class="filter-dropdown">
-                          <div class="dropdown show">
-                            <a class="btn btn-custom dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              This Week
-                            </a>
-
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#">This Week</a>
-                              <a class="dropdown-item" href="#">This Month</a>
-                              <a class="dropdown-item" href="#">This Year</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-histogram">
-                      <canvas id="alertHisto" height="70px"></canvas>
                     </div>
                   </div>
                 </div>
-                <div class="reports">
+                <div class="permission">
                   <div class="card">
                     <div class="card-whole">
                       <div class="d-flex justify-content-between my-2">
-                        <div class="d-flex">
-                          <div class="card-icon">
-                            <i class="ri-flashlight-fill ri-lg"></i>
-                          </div>
-                          <div class="card-heading">
-                            <h5> Alerts Updates</h5>
-                            <span>Showing Updates from last 48 hours</span>
-                          </div>
-                        </div>
-                        <div class="filter-dropdown d-flex">
-                          <div class="dropdown show mr-2">
-                            <a class="btn btn-custom dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              All Status
-                            </a>
-
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#">All States</a>
-                              <a class="dropdown-item" href="#">Heavy Rainfall</a>
-                              <a class="dropdown-item" href="#">Flood</a>
-                              <a class="dropdown-item" href="#">Heavy Snowfall</a>
-                              <a class="dropdown-item" href="#">Earthquake</a>
-                              <a class="dropdown-item" href="#">Wildfire</a>
-                              <a class="dropdown-item" href="#">Heavy Hailstrome</a>
-                              <a class="dropdown-item" href="#">Heavy Lightining</a>
-                            </div>
-                          </div>
-                          <div class="dropdown show">
-                            <a class="btn btn-custom dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              All States
-                            </a>
-
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#">All States</a>
-                              <a class="dropdown-item" href="#">State 1</a>
-                              <a class="dropdown-item" href="#">State 2</a>
-                              <a class="dropdown-item" href="#">Gandaki</a>
-                              <a class="dropdown-item" href="#">Bagmati</a>
-                              <a class="dropdown-item" href="#">State 5</a>
-                              <a class="dropdown-item" href="#">Karnali</a>
-                              <a class="dropdown-item" href="#">SudurPaschim</a>
-                            </div>
+                        <div class="card-heading">
+                          <h5> Superadmin</h5>
+                          <div class="label">
+                            <span>Allow Users Settings</span>
                           </div>
                         </div>
                       </div>
                       <div class="card-content">
-                        <div class="d-flex flex-column alert-lists">
+                        <div class="flex-column role-lists">
                           <div class="list-item d-flex justify-content-between">
-                            <div class="list-alert">
-                              <div class="d-flex">
-                                <div class="alert-icon">
-                                  <i class="flood ri-flood-fill ri-3x"></i>
-                                </div>
-                                <div class="alert-desc">
-                                  <h5>Flood at Sukla Gandaki , Raipur (Gandaki) </h5>
-                                  <p>Updated 09/20 at 5:30 AM</p>
-                                </div>
-                              </div>
+                            <div class="permission-title">
+                              Users can invite new users
                             </div>
-                            <div class="list-status d-flex">
-                              <div class="alert-status ">
-                                <a href="" class="btn high-risk animated fadeIn" data-toggle="tooltip"
-                                  data-placement="top" title="Marked as High Risk">
-                                  <i class="ri-information-fill ri-xl"></i>
-                                </a>
-                              </div>
-                              <button class="btn" data-toggle="modal" data-target="#discoverStatus"><i
-                                  class="ri-compass-discover-fill ri-lg"></i>
-                                Discover</button>
+                            <div class="custom-control custom-switch" data-toggle="tooltip" data-placement="top"
+                              title="Allow permission">
+                              <input type="checkbox" class="custom-control-input" id="S-invite" checked>
+                              <label class="custom-control-label" for="S-invite"></label>
                             </div>
                           </div>
                           <div class="list-item d-flex justify-content-between">
-                            <div class="list-alert">
-                              <div class="d-flex">
-                                <div class="alert-icon">
-                                  <i class="earthquake ri-earthquake-fill ri-3x"></i>
-                                </div>
-                                <div class="alert-desc">
-                                  <h5>Earthquake hits on Bajura , Gotikhel (Karnali) </h5>
-                                  <p>Updated 09/20 at 5:30 AM</p>
-                                </div>
-                              </div>
+                            <div class="permission-title">
+                              Users can manage delete & re-invite invited users
                             </div>
-                            <div class="list-status d-flex">
-                              <div class="alert-status ">
-                                <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
-                                  data-placement="top" title="Marked as High Risk">
-                                  <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
-                                </a>
-                              </div>
-                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
-                                  class="ri-compass-discover-fill ri-lg"></i>
-                                Discover</button>
+                            <div class="custom-control custom-switch" data-toggle="tooltip" data-placement="top"
+                              title="Allow permission">
+                              <input type="checkbox" class="custom-control-input" id="S-M-invite" checked>
+                              <label class="custom-control-label" for="S-M-invite"></label>
                             </div>
                           </div>
                           <div class="list-item d-flex justify-content-between">
-                            <div class="list-alert">
-                              <div class="d-flex">
-                                <div class="alert-icon">
-                                  <i class="hailstrom ri-hail-fill ri-3x"></i>
-                                </div>
-                                <div class="alert-desc">
-                                  <h5>Heavy hailstrome at Pokhara , Sarankot (Gandaki)</h5>
-                                  <p>Updated 09/20 at 5:30 AM</p>
-                                </div>
-                              </div>
+                            <div class="permission-title">
+                              Users can manage admin settings
                             </div>
-                            <div class="list-status d-flex">
-                              <div class="alert-status ">
-                                <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
-                                  data-placement="top" title="Marked as High Risk">
-                                  <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
-                                </a>
-                              </div>
-                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
-                                  class="ri-compass-discover-fill ri-lg"></i>
-                                Discover</button>
+                            <div class="custom-control custom-switch" data-toggle="tooltip" data-placement="top"
+                              title="Allow permission">
+                              <input type="checkbox" class="custom-control-input" id="S-S-invite" checked>
+                              <label class="custom-control-label" for="S-S-invite"></label>
                             </div>
                           </div>
                           <div class="list-item d-flex justify-content-between">
-                            <div class="list-alert">
-                              <div class="d-flex">
-                                <div class="alert-icon">
-                                  <i class="lightining ri-thunderstorms-fill ri-3x"></i>
-                                </div>
-                                <div class="alert-desc">
-                                  <h5>Heavy lightining at Kusma , Baglung (State , Gandaki) </h5>
-                                  <p>Updated 09/20 at 5:30 AM</p>
-                                </div>
-                              </div>
+                            <div class="permission-title">
+                              Users can add new categories
                             </div>
-                            <div class="list-status d-flex">
-                              <div class="alert-status ">
-                                <a href="" class="btn ongoing-rescue animated fadeIn" data-toggle="tooltip"
-                                  data-placement="top" title="Ongoing rescue">
-                                  <i class="ri-run-fill ri-xl animate__animated infinite animate__pulse"></i>
-                                </a>
-                              </div>
-                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
-                                  class="ri-compass-discover-fill ri-lg"></i>
-                                Discover</button>
+                            <div class="custom-control custom-switch" data-toggle="tooltip" data-placement="top"
+                              title="Allow permission">
+                              <input type="checkbox" class="custom-control-input" id="S-A-invite" checked>
+                              <label class="custom-control-label" for="S-A-invite"></label>
                             </div>
                           </div>
                           <div class="list-item d-flex justify-content-between">
-                            <div class="list-alert">
-                              <div class="d-flex">
-                                <div class="alert-icon">
-                                  <i class="flood ri-flood-fill ri-3x"></i>
-                                </div>
-                                <div class="alert-desc">
-                                  <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
-                                  <p>Updated 09/20 at 5:30 AM</p>
-                                </div>
-                              </div>
+                            <div class="permission-title">
+                              Users can add delete & modify category
                             </div>
-                            <div class="list-status d-flex">
-                              <div class="alert-status ">
-                                <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
-                                  data-placement="top" title="Marked as High Risk">
-                                  <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
-                                </a>
-                              </div>
-                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
-                                  class="ri-compass-discover-fill ri-lg"></i>
-                                Discover</button>
+                            <div class="custom-control custom-switch" data-toggle="tooltip" data-placement="top"
+                              title="Allow permission">
+                              <input type="checkbox" class="custom-control-input" id="S-MC-invite" checked>
+                              <label class="custom-control-label" for="S-MC-invite"></label>
                             </div>
                           </div>
                           <div class="list-item d-flex justify-content-between">
-                            <div class="list-alert">
-                              <div class="d-flex">
-                                <div class="alert-icon">
-                                  <i class="flood ri-flood-fill ri-3x"></i>
-                                </div>
-                                <div class="alert-desc">
-                                  <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
-                                  <p>Updated 09/20 at 5:30 AM</p>
-                                </div>
-                              </div>
+                            <div class="permission-title">
+                              Users can add new items & utilities
                             </div>
-                            <div class="list-status d-flex">
-                              <div class="alert-status ">
-                                <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
-                                  data-placement="top" title="Marked as High Risk">
-                                  <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
-                                </a>
-                              </div>
-                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
-                                  class="ri-compass-discover-fill ri-lg"></i>
-                                Discover</button>
+                            <div class="custom-control custom-switch" data-toggle="tooltip" data-placement="top"
+                              title="Allow permission">
+                              <input type="checkbox" class="custom-control-input" id="S-U-invite" checked>
+                              <label class="custom-control-label" for="S-U-invite"></label>
                             </div>
                           </div>
                           <div class="list-item d-flex justify-content-between">
-                            <div class="list-alert">
-                              <div class="d-flex">
-                                <div class="alert-icon">
-                                  <i class="flood ri-flood-fill ri-3x"></i>
-                                </div>
-                                <div class="alert-desc">
-                                  <h5>Flood at Sukla Gandaki , Raipur (State , Gandaki) </h5>
-                                  <p>Updated 09/20 at 5:30 AM</p>
-                                </div>
-                              </div>
+                            <div class="permission-title">
+                              Users can delete & modify items & utilities
                             </div>
-                            <div class="list-status d-flex">
-                              <div class="alert-status ">
-                                <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
-                                  data-placement="top" title="Marked as High Risk">
-                                  <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
-                                </a>
-                              </div>
-                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
-                                  class="ri-compass-discover-fill ri-lg"></i>
-                                Discover</button>
+                            <div class="custom-control custom-switch" data-toggle="tooltip" data-placement="top"
+                              title="Allow permission">
+                              <input type="checkbox" class="custom-control-input" id="S-M-items" checked>
+                              <label class="custom-control-label" for="S-M-items"></label>
                             </div>
                           </div>
                           <div class="list-item d-flex justify-content-between">
-                            <div class="list-alert">
-                              <div class="d-flex">
-                                <div class="alert-icon">
-                                  <i class="snow ri-snowy-fill ri-3x"></i>
-                                </div>
-                                <div class="alert-desc">
-                                  <h5>Heavy Snowfall at Chame , Manag (Gandaki) </h5>
-                                  <p>Updated 09/20 at 5:30 AM</p>
-                                </div>
-                              </div>
+                            <div class="permission-title">
+                              Users can add new alerts reports
                             </div>
-                            <div class="list-status d-flex">
-                              <div class="alert-status ">
-                                <a href="" class="btn high-risk animated fadeIn" hidden data-toggle="tooltip"
-                                  data-placement="top" title="Marked as High Risk">
-                                  <i class="ri-information-fill ri-xl animate__animated infinite animate__pulse"></i>
-                                </a>
-                              </div>
-                              <button data-toggle="modal" data-target="#discoverStatus" class="btn"><i
-                                  class="ri-compass-discover-fill ri-lg"></i>
-                                Discover</button>
+                            <div class="custom-control custom-switch" data-toggle="tooltip" data-placement="top"
+                              title="Allow permission">
+                              <input type="checkbox" class="custom-control-input" id="S-a-reports" checked>
+                              <label class="custom-control-label" for="S-a-reports"></label>
                             </div>
                           </div>
-
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div class="card-footer">
+                    <button class="w-100 btn btn-primary">Save Settings</button>
                   </div>
                 </div>
               </div>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Ndrma web app</title>
+  <!-- scss file will be replaced with bundled css -->
+  <link href="sass/main.scss" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        <a href=""><img src="./assets/ndrmaLogo.svg" alt="logo"></a>
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="dashboard.html" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-donut-chart-fill ri-lg"></i> Dashboard</a>
+      </div>
+      <div class="list-group list-group-flush">
+        <span>sources</span>
+        <a href="items.html" class="list-group-item list-group-item-action bg-light ">
+          <i class="ri-ruler-fill ri-lg"></i> Items & Utilities</a>
+        <a href="category.html" class="list-group-item list-group-item-action bg-light ">
+          <i class="ri-stack-fill ri-lg"></i> Categories</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-focus-3-fill ri-lg"></i> State & Provience</a>
+        <a href="alerts.html" class="list-group-item list-group-item-action bg-light active-item">
+          <i class="ri-alarm-warning-fill ri-lg"></i> Alert Reports</a>
+      </div>
+      <div class="list-group list-group-flush">
+        <span>Admin</span>
+        <a href="users-roles.html" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-group-fill ri-lg"></i> Users & Roles</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-settings-2-fill ri-lg"></i> Settings</a>
+      </div>
+      <div class="sidebar-footer">
+        <div class="list-group list-group-flush">
+          <a href="#" class="btn btn-primary">
+            <i class="ri-add-circle-fill ri-xl"></i> Add New Entry</a>
+          <a href="#" class="btn btn-custom">
+            <i class="ri-logout-circle-r-line ri-xl"></i> Logout</a>
+        </div>
+      </div>
+
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom justify-content-between">
+        <div class="menu toggle">
+          <a class="btn " id="menu-toggle">
+            <i class="navbar-toggler-icon"> </i>
+          </a>
+        </div>
+        <div class="search-bar ">
+          <form action="" class="">
+            <input type="text" class="form-control" aria-label="Small" placeholder="Search here">
+          </form>
+        </div>
+        <div class="avatar">
+          <a href="profile.html" class="btn default-avatar"><img src="./assets/default-avatar.jpg" alt="" width="36px"
+              height="auto"></a>
+        </div>
+
+      </nav>
+      <div class="bg-class bg-profile">
+        <div class="container">
+          <div class="page-heading">
+            <div class="d-flex justify-content-between heading-actions mt-4">
+              <div class="heading">
+                <h5 class="">My profile</h5>
+                <span>Last loged in 3 min ago</span>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="profile-avatar">
+                  <div class="profile">
+                    <div class="card">
+                      <div class="card-heading">
+                        <h5> Profile Picture</h5>
+                        <span>Click on profile picture to upload</span>
+                      </div>
+                      <div class="card-action">
+                        <form action="">
+                          <div class="form-group">
+                            <div class="drag-drop">
+                              <input type="file" class="custom-file-input">
+                              <label for="">
+                                <span><i class="ri-upload-cloud-line ri-3x"></i></span>
+                                <span>Choose or Drag & Drop File</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <button class="btn btn-primary w-100">Upload & Save Changes</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="profile">
+                  <div class="card">
+                    <div class="Personal">
+                      <div class="card-heading">
+                        <h5> Personal Information</h5>
+                      </div>
+                      <div class="card-content">
+                        <form action="">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="">First Name</label>
+                                <input type="text" class="form-control" id="" value="Ashish">
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="">First Name</label>
+                                <input type="text" class="form-control" id="" value="Dhakal">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label for="">Email Address</label>
+                                <input type="email" class="form-control" id="" value="etsadhakal@icloud.com" readonly>
+                                <label for="" class="text-danger">This is your account email this cannot be
+                                  changed or replaced</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="">Your Gender</label>
+                                <select name="" id="" class="custom-select">
+                                  <option selected>Choose...</option>
+                                  <option value="1">Male</option>
+                                  <option value="2">Female</option>
+                                  <option value="3">Do No Specify </option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <button class="btn btn-primary">Save Details</button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="card">
+                    <div class="Security">
+                      <div class="card-heading">
+                        <h5> Security Information</h5>
+                      </div>
+                      <div class="card-content">
+                        <form action="">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <div class="form-group">
+                                <label for="">Current Password</label>
+                                <input type="password" class="form-control" id="" value="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <div class="form-group">
+                                <label for="">New Password</label>
+                                <input type="password" class="form-control" id="" value="">
+                              </div>
+                              <div class="form-group">
+                                <button class="btn-sm btn-secondary"><i class="ri-key-2-line"></i> Generate
+                                  Password</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <div class="form-group">
+                                <label for="">Repeat Password</label>
+                                <input type="password" class="form-control" id="" value="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <button class="btn btn-success">Change Password</button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+  <script src="index.js"></script>
+  <script src="chartJs.js"></script>
+</body>
+
+<!-- Modals -->
+<div class="modal right " id="alertReport" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Add New Alert Report </h4>
+        <button type="button" class="close" data-dismiss="modal"><i class="ri-close-circle-fill ri-xl"></i></button>
+      </div>
+
+      <!-- Modal body -->
+      <form action="">
+        <div class="modal-body">
+          <div class="section">
+            <div class="sec-title">
+              <span>Choose Alert Type</span>
+              <span class="sub-title">Please select one alert type to report that has been caused </span>
+            </div>
+            <div class="sec-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group custom-checkbox">
+                    <input type="radio" id="flood" name="disaster" />
+                    <label for="flood"> <i class=" flood ri-flood-fill ri-lg"></i> Flood</label>
+                    <input type="radio" id="earthquake" name="disaster" />
+                    <label for="earthquake"> <i class=" earthquake ri-earthquake-fill ri-lg"></i> Earthquake</label>
+                    <input type="radio" id="wildfire" name="disaster" />
+                    <label for="wildfire"> <i class=" wildfire ri-fire-fill ri-lg"></i> Wildfire</label>
+                    <input type="radio" id="rainfall" name="disaster" />
+                    <label for="rainfall"> <i class=" rainfall ri-heavy-showers-fill ri-lg"></i> Heavy
+                      Rainfall</label>
+                    <input type="radio" id="snowfall" name="disaster" />
+                    <label for="snowfall"> <i class=" snow ri-snowy-fill ri-lg"></i> Heavy Snowfall</label>
+                    <input type="radio" id="lightining" name="disaster" />
+                    <label for="lightining"> <i class=" lightining ri-thunderstorms-fill ri-lg"></i> Heavy
+                      lightining</label>
+                    <input type="radio" id="hailstrome" name="disaster" />
+                    <label for="hailstrome"> <i class=" hailstrom ri-hail-fill ri-lg"></i> Heavy
+                      hailstrome</label>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="mark-as d-flex justify-content-between">
+                    <div class="heading">
+                      <h5><i class="ri-error-warning-fill"></i>Mark as High Risk</h5>
+                      <span>Please enable if the alert has the high posibility of causing massive damage</span>
+                    </div>
+                    <div class="switch">
+                      <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-title">
+              <span>Alert Details</span>
+            </div>
+            <div class="sec-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Select Provience</label>
+                    <select name="" id="" class="custom-select">
+                      <option selected>Choose...</option>
+                      <option value="1">Provience 1</option>
+                      <option value="2">Provience 2</option>
+                      <option value="3">Gandaki</option>
+                      <option value="4">Bagmati</option>
+                      <option value="5">Provience 5</option>
+                      <option value="6">Karnali</option>
+                      <option value="7">SudurPaschim</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Select Municipality</label>
+                    <select name="" id="" class="custom-select">
+                      <option selected>Choose...</option>
+                      <option value="1">Kathmandu</option>
+                      <option value="2">Lalitpur</option>
+                      <option value="3">Bhaktapur</option>
+                      <option value="4">Hetauda</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Select District</label>
+                    <select name="" id="" class="custom-select">
+                      <option selected>Choose...</option>
+                      <option value="1">Hetauda</option>
+                      <option value="2">Makwanpur</option>
+                      <option value="3">Himchuli</option>
+                      <option value="4">Makwanpur</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="">Ward No</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-title">
+              <span>Alert Location</span>
+            </div>
+            <div class="sec-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Select Location</label>
+                    <input type="text" class="form-control" placeholder="Search..">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button btn-primary" class="btn btn-primary w-100" data-dismiss="modal">
+            Submit & Publish Alert Report</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+</html>

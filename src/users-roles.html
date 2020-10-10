@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Ndrma web app</title>
+  <!-- scss file will be replaced with bundled css -->
+  <link href="sass/main.scss" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        <a href=""><img src="./assets/ndrmaLogo.svg" alt="logo"></a>
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="dashboard.html" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-donut-chart-fill ri-lg"></i> Dashboard</a>
+      </div>
+      <div class="list-group list-group-flush">
+        <span>sources</span>
+        <a href="items.html" class="list-group-item list-group-item-action bg-light ">
+          <i class="ri-ruler-fill ri-lg"></i> Items & Utilities</a>
+        <a href="category.html" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-stack-fill ri-lg"></i> Categories</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-focus-3-fill ri-lg"></i> State & Provience</a>
+        <a href="alerts.html" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-alarm-warning-fill ri-lg"></i> Alert Reports</a>
+      </div>
+      <div class="list-group list-group-flush">
+        <span>Admin</span>
+        <a href="users-roles.html" class="list-group-item list-group-item-action bg-light active-item">
+          <i class="ri-group-fill ri-lg"></i> Users & Roles</a>
+        <a href="settings.html" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-settings-2-fill ri-lg"></i> Settings</a>
+      </div>
+      <div class="sidebar-footer">
+        <div class="list-group list-group-flush">
+          <a href="#" class="btn btn-primary">
+            <i class="ri-add-circle-fill ri-xl"></i> Add New Entry</a>
+          <a href="#" class="btn btn-custom">
+            <i class="ri-logout-circle-r-line ri-xl"></i> Logout</a>
+        </div>
+      </div>
+
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom justify-content-between">
+        <div class="menu toggle">
+          <a class="btn " id="menu-toggle">
+            <i class="navbar-toggler-icon"> </i>
+          </a>
+        </div>
+        <div class="search-bar ">
+          <form action="" class="">
+            <input type="text" class="form-control" aria-label="Small" placeholder="Search here">
+          </form>
+        </div>
+        <div class="avatar">
+          <a href="" class="btn default-avatar"><img src="./assets/default-avatar.jpg" alt="" width="36px"
+              height="auto"></a>
+        </div>
+
+      </nav>
+      <div class="bg-class">
+        <div class="container">
+          <div class="page-heading">
+            <div class="d-flex justify-content-between heading-actions mt-4">
+              <div class="heading">
+                <h5 class="">Users & Roles</h5>
+                <span>Last updated at 22 September , 2020</span>
+              </div>
+              <div class="heading-actions">
+                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#inviteUser"><i
+                    class="ri-user-shared-2-fill"></i>
+                  Invite User</button>
+              </div>
+            </div>
+          </div>
+          <div class="page-tabs">
+            <ul class="nav nav-pills" id="userTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#users" role="tab" aria-controls="home"
+                  aria-selected="true">users</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#invited" role="tab"
+                  aria-controls="profile" aria-selected="false">Invited</a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-content">
+            <div class="tab-content" id="userTab">
+              <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="home-tab">
+                <div class="data-search d-flex justify-content-between">
+                  <div class="entries">
+                    <span>Showing 4 entries</span>
+                  </div>
+                  <div class="search">
+                    <form action="">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </form>
+                  </div>
+                </div>
+                <div class="data-tables">
+                  <table class="table table-striped table-responsive-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col">User ID</th>
+                        <th scope="col">User</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Added By</th>
+                        <th scope="col" class="text-right">Status</th>
+                        <th scope="col" class="text-right"> Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#GH411</td>
+                        <td><img src="./assets/default-avatar.jpg" alt="" width="32px" height="32px"> Ashish Dhakal</td>
+                        <td><span class="email">ashish.dhakal@icloud.com</span></td>
+                        <td>Owner</td>
+                        <td>Vikash Bhusal</td>
+                        <td class="text-right">
+                          <div class="custom-control custom-switch" data-toggle="tooltip" data-placement="top"
+                            title="Make Inactive">
+                            <input type="checkbox" class="custom-control-input" id="active" checked>
+                            <label class="custom-control-label" for="active"></label>
+                          </div>
+                        </td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="disabled" role="button" data-toggle="tooltip" data-placement="top"
+                            title="Owner Cannot Be Deleted">
+                            <i class="ri-delete-bin-line ri-lg"></i>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#GH412</td>
+                        <td><img src="./assets/avatar-random-2.jpg" alt="" width="32px" height="32px"> Hari Krishna
+                          Subedi</td>
+                        <td><span class="email">hari@gmail.com</span></td>
+                        <td>Super Admin</td>
+                        <td>Ashish Dhakal</td>
+                        <td class="text-right">
+                          <div class="custom-control custom-switch" data-toggle="tooltip" data-placement="top"
+                            title="Make Active">
+                            <input type="checkbox" class="custom-control-input" id="inactive">
+                            <label class="custom-control-label" for="inactive"></label>
+                          </div>
+                        </td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="" role="button">
+                            <i class="ri-delete-bin-line ri-lg"></i>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#GH413</td>
+                        <td><img src="./assets/avatar-random-3.jpg" alt="" width="32px" height="32px"> Bhuwan Ojha
+                        </td>
+                        <td><span class="email">bhuwan@hotmail.com</span></td>
+                        <td>Admin</td>
+                        <td>Ashish Dhakal</td>
+                        <td class="text-right">
+                          <div class="custom-control custom-switch" data-toggle="tooltip" data-placement="top"
+                            title="Make Inactive">
+                            <input type="checkbox" class="custom-control-input" id="newactive" checked>
+                            <label class="custom-control-label" for="newactive"></label>
+                          </div>
+                        </td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="disabled" role="button">
+                            <i class="ri-delete-bin-line ri-lg"></i>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#GH414</td>
+                        <td><img src="./assets/default-avatar.jpg" alt="" width="32px" height="32px"> Sunny Khadka
+                        </td>
+                        <td><span class="email">sunny@gmail.com</span></td>
+                        <td>Observer</td>
+                        <td>Ashish Dhakal</td>
+                        <td class="text-right">
+                          <div class="custom-control custom-switch" data-toggle="tooltip" data-placement="top"
+                            title="Make Inactive">
+                            <input type="checkbox" class="custom-control-input" id="nactive" checked>
+                            <label class="custom-control-label" for="nactive"></label>
+                          </div>
+                        </td>
+                        <td class="text-right actions dropdown">
+                          <a href="#">
+                            <i class="ri-edit-2-line ri-lg"></i>
+                          </a>
+                          <a href="" class="disabled" role="button">
+                            <i class="ri-delete-bin-line ri-lg"></i>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class=" tab-pane fade" id="invited" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="data-search d-flex justify-content-between">
+                  <div class="entries">
+                    <span>Showing 1 entries</span>
+                  </div>
+                  <div class="search">
+                    <form action="">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </form>
+                  </div>
+                </div>
+                <div class="data-tables">
+                  <table class="table table-striped table-responsive-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col">Invited ID</th>
+                        <th scope="col">User</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Invited By</th>
+                        <th scope="col" class="text-right"> Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#GH411</td>
+                        <td><img src="./assets/default-avatar.jpg" alt="" width="32px" height="32px"> Harry Styles</td>
+                        <td><span class="email">harry@icloud.com</span></td>
+                        <td>Observer</td>
+                        <td>Ashish Dhakal</td>
+                        <td class="text-right actions dropdown">
+                          <a href="" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-more-2-fill ri-lg"></i>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Change Role & Re-Invite</a>
+                            <a class="dropdown-item" href="#">Cancel Invite</a>
+
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+  <script src="index.js"></script>
+</body>
+<!-- Modals -->
+<div class="modal right " id="inviteUser" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Invite User</h4>
+        <button type="button" class="close" data-dismiss="modal"><i class="ri-close-circle-fill ri-xl"></i></button>
+      </div>
+
+      <!-- Modal body -->
+      <form action="">
+        <div class="modal-body">
+          <div class="section">
+            <div class="sec-title">
+              <span>Users DETAILS</span>
+            </div>
+            <div class="sec-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">First Name</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Last Name</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="">User Email</label>
+                    <input type="email" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-title">
+              <span>USer Role</span>
+            </div>
+            <div class="sec-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Select User Role</label>
+                    <select name="" id="" class="custom-select">
+                      <option selected>Choose...</option>
+                      <option value="1">Super Admin</option>
+                      <option value="2">Admin</option>
+                      <option value="3">Observer</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button btn-primary" class="btn btn-primary w-100" data-dismiss="modal">
+            <i class="ri-user-shared-2-fill"></i>
+            Send Invite</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+</html>

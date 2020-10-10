@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Ndrma web app</title>
+  <!-- scss file will be replaced with bundled css -->
+  <link href="sass/main.scss" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        <a href=""><img src="./assets/ndrmaLogo.svg" alt="logo"></a>
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="dashboard.html" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-donut-chart-fill ri-lg"></i> Dashboard</a>
+      </div>
+      <div class="list-group list-group-flush">
+        <span>sources</span>
+        <a href="items.html" class="list-group-item list-group-item-action bg-light ">
+          <i class="ri-ruler-fill ri-lg"></i> Items & Utilities</a>
+        <a href="category.html" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-stack-fill ri-lg"></i> Categories</a>
+        <a href="states.html" class="list-group-item list-group-item-action bg-light active-item">
+          <i class="ri-focus-3-fill ri-lg"></i> State & Provience</a>
+        <a href="alerts.html" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-alarm-warning-fill ri-lg"></i> Alert Reports</a>
+      </div>
+      <div class="list-group list-group-flush">
+        <span>Admin</span>
+        <a href="users-roles.html" class="list-group-item list-group-item-action bg-light ">
+          <i class="ri-group-fill ri-lg"></i> Users & Roles</a>
+        <a href="settings.html" class="list-group-item list-group-item-action bg-light">
+          <i class="ri-settings-2-fill ri-lg"></i> Settings</a>
+      </div>
+      <div class="sidebar-footer">
+        <div class="list-group list-group-flush">
+          <a href="#" class="btn btn-primary">
+            <i class="ri-add-circle-fill ri-xl"></i> Add New Entry</a>
+          <a href="#" class="btn btn-custom">
+            <i class="ri-logout-circle-r-line ri-xl"></i> Logout</a>
+        </div>
+      </div>
+
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom justify-content-between">
+        <div class="menu toggle">
+          <a class="btn " id="menu-toggle">
+            <i class="navbar-toggler-icon"> </i>
+          </a>
+        </div>
+        <div class="search-bar ">
+          <form action="" class="">
+            <input type="text" class="form-control" aria-label="Small" placeholder="Search here">
+          </form>
+        </div>
+        <div class="avatar">
+          <a href="" class="btn default-avatar"><img src="./assets/default-avatar.jpg" alt="" width="36px"
+              height="auto"></a>
+        </div>
+
+      </nav>
+      <div class="">
+        <div class="map-container" id="map">
+
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+  <script src="index.js"></script>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZXRzYWRoYWthbCIsImEiOiJja2ZqZ3Ewem8xNGl6MnludjFuaTRlM3RnIn0.Uxi9aHgtVXML5VYcaA0lHA';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/light-v10',
+      center: [85.300140, 27.700769],
+      zoom: 6.5
+    });
+    map.on('style.load', function (e) {
+      map.addSource('markers', {
+        "type": "geojson",
+        "data": {
+          "type": "FeatureCollection",
+          "features": [{
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [84.0349557, 28.0596941]
+            },
+            "properties": {
+              'description':
+                '<div class="content"><div class="content-head"><i class="ongoing-rescue ri-run-fill ri-lg"></i>Ongoing-rescue</div><div class="content-tiltle"><div class="alert-icon"><span><i class="flood ri-flood-fill ri-2x"></i></span></div><div class="alert-title"><span class="date">26 Sep , 2020</span><span class="head"> Flood at Sukla Gandaki , Raipur (Gandaki)</span></div></div><div class="content-body"><p> Mapped Rescue Items </p><ul><li>Tirpal / Tarpolian <span> 16</span></li><li>Bull Dojer <span> 2</span></li><li>Ladder <span> 19</span></li> <li>Bull Dojer <span> 3</span></li></ul></div><div class="content-link"><a href="" data-toggle="modal" data-target="#discoverStatus" aria-label="Close popup"> <i class="ri-compass-discover-fill ri-lg"></i> Discover More</a></div></div>',
+            },
+          }]
+        }
+      });
+      map.addLayer({
+        "id": "circles1",
+        "source": "markers",
+        "type": "circle",
+        "paint": {
+          "circle-radius": 10,
+          "circle-color": "#319795 ",
+          "circle-opacity": 1,
+          "circle-stroke-width": 5,
+          "circle-stroke-color": "#38B2AC",
+        },
+      });
+      function animateMarker(timestamp) {
+        // Update the data to a new position based on the animation timestamp. The
+        // divisor in the expression `timestamp / 1000` controls the animation speed.
+        map.getSource('point').setData(pointOnCircle(timestamp / 1000));
+
+        // Request the next frame of the animation.
+        requestAnimationFrame(animateMarker);
+      }
+
+      // Start the animation.
+      animateMarker(1);
+    });
+
+    map.on('click', 'circles1', function (e) {
+      var coordinates = e.features[0].geometry.coordinates.slice();
+      var description = e.features[0].properties.description;
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      new mapboxgl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(description)
+        .addTo(map);
+    });
+
+  </script>
+
+</body>
+<!-- Modals -->
+<div class="modal right " id="discoverStatus" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="ri-compass-discover-fill"></i> Discover Status</h4>
+        <button type="button" class="close" data-dismiss="modal"><i class="ri-close-circle-fill ri-xl"></i></button>
+      </div>
+
+      <!-- Modal body -->
+      <form action="">
+        <div class="modal-body">
+          <div class="section">
+            <div class="alert-title">
+              <div class="d-flex">
+                <div class="alert-icon">
+                  <i class="flood ri-flood-fill ri-3x"></i>
+                </div>
+                <div class="alert-desc">
+                  <h5>Flood at Sukla Gandaki , Raipur (Gandaki)</h5>
+                  <p>Updated 09/20 at 5:30 AM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="mark-as d-flex justify-content-between">
+                    <div class="heading">
+                      <h5><i class="ri-error-warning-fill"></i>Mark as High Risk</h5>
+                    </div>
+                    <div class="switch">
+                      <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="markedHigh" checked>
+                        <label class="custom-control-label" for="markedHigh"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="ongoing-rescue d-flex justify-content-between">
+                    <div class="heading">
+                      <h5><i class="ri-run-fill"></i>Ongoing Rescue</h5>
+                    </div>
+                    <div class="switch">
+                      <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="ongoingRescue" checked>
+                        <label class="custom-control-label" for="ongoingRescue"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.5401338455267!2d84.06076711504011!3d28.069062716109634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995bb2c8ce51fbd%3A0x76b8fd722830103c!2sShuklagandaki%20Municipality%20Ward%20No.%209!5e0!3m2!1sen!2snp!4v1602171649074!5m2!1sen!2snp"
+                width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-title new-title">
+              <span>Nearby Useful Resources</span>
+            </div>
+            <div class="sec-body">
+              <div class="source-list">
+                <div class="d-flex justify-content-between">
+                  <div class="location">
+                    <div class="d-flex">
+                      <div class="location-icon">
+                        <i class="ri-pin-distance-fill"></i>
+                      </div>
+                      <div class="source-location">
+                        <span class="source">Nepal Sainik Bahini Adda , Ramechap ,
+                          Gorkha</span>
+                        <p>12.78 Km away from rescue spot</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact">
+                    <span><i class="ri-phone-fill"></i> +977 - 561231</span>
+                  </div>
+                </div>
+              </div>
+              <div class="source-list">
+                <div class="d-flex justify-content-between">
+                  <div class="location">
+                    <div class="d-flex">
+                      <div class="location-icon">
+                        <i class="ri-pin-distance-fill"></i>
+                      </div>
+                      <div class="source-location">
+                        <span class="source">Nepal Sainik Bahini Adda , Ramechap ,
+                          Gorkha</span>
+                        <p>12.78 Km away from rescue spot</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact">
+                    <span><i class="ri-phone-fill"></i> +977 - 561231</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sec-title new-title">
+              <span>List of possible available rescue items</span>
+            </div>
+            <div class="sec-body">
+              <div class="rescue-item-list">
+                <div class="d-flex justify-content-between">
+                  <div class="item-name">
+                    Tirpal / Tarpolian
+                  </div>
+                  <div class="item-amount">
+                    16
+                  </div>
+                </div>
+              </div>
+              <div class="rescue-item-list">
+                <div class="d-flex justify-content-between">
+                  <div class="item-name">
+                    Bull Dojer
+                  </div>
+                  <div class="item-amount">
+                    2
+                  </div>
+                </div>
+              </div>
+              <div class="rescue-item-list">
+                <div class="d-flex justify-content-between">
+                  <div class="item-name">
+                    Ladder
+                  </div>
+                  <div class="item-amount">
+                    19
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button btn-primary" class="btn btn-primary w-100" data-dismiss="modal">
+            <i class="ri-checkbox-circle-fill"></i> Mark as Sucessfully Rescued</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+</html>

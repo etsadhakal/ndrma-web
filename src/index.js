@@ -2,6 +2,8 @@ import 'bootstrap';
 import $ from "jquery";
 import Chart from 'chart.js';
 
+
+
 import('./reset-password.html');
 import('./forgot.html');
 import('./dashboard.html');
@@ -11,6 +13,8 @@ import imageURL from './assets/ndrmaLogo-nepal.svg';
 import logoOnly from './assets/ndrmaLogo.svg';
 import image from './assets/mailbox.gif';
 import defaultImage from './assets/default-avatar.jpg';
+import randomImage from './assets/avatar-random-2.jpg';
+import randomImage2 from './assets/avatar-random-3.jpg';
 
 // JQuery
 $(document).ready(() => {
